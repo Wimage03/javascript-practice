@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>09-Exercises</title>
+</head>
+<body>
+  <input class="js-input" placeholder="Type something" onkeyup="
+      display(event);
+    ">
+
+  <p class="js-display"></p>
+
+  <script>
+    function display(event) {
+      const inputElem = document.querySelector('.js-input');
+      document.querySelector('.js-display')
+        .innerHTML = inputElem.value;
+    }
+  </script>
+</body>
+</html>
