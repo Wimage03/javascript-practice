@@ -48,8 +48,18 @@
       console.log(`Cart quantity: ${cartQuantity}`);
     ">Reset Cart</button>
 
+  <p class="js-display"></p>
+
   <script>
+
     let cartQuantity = 0;
+
+    function display() {
+      document.querySelector('.js-display')
+        .innerHTML = `Cart Quantity: ${cartQuantity}`;
+    }
+
+    display();
 
     function updateCartQuantity(change) {
       if (cartQuantity + change > 10) {
@@ -64,6 +74,8 @@
 
       cartQuantity += change;
       console.log(`Cart quantity: ${cartQuantity}`);
+
+      display();
     }
   </script>
 </body>
